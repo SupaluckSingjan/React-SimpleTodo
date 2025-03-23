@@ -1,5 +1,5 @@
 # ReactJS Simple Todo App.
-This semi-project that I would like go over for a basic ReactJS skill.
+This semi-project that I would like to go over for a basic ReactJS skill.
 
 # React + Vite
 
