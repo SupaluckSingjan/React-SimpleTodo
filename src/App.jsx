@@ -1,5 +1,6 @@
 
 import './App.css'
+import Task from './Components/Task'
 
 function App() {
   
@@ -15,6 +16,8 @@ function App() {
       <div className="list-todo">
       
       </div>
+    
+      <Task />
     </div>
   )
 }
