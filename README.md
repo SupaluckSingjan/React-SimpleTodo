@@ -1,6 +1,8 @@
 # ReactJS Simple Todo App.
 This semi-project that I would like to go over for a basic ReactJS skill. I hope it will be helpful for a beginner as well.
 
+By Supaluck Singjan.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
