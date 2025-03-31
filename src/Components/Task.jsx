@@ -3,6 +3,7 @@ import { useState } from "react"
 const Task = () => {
 
     const [todoList, setTodoList] = useState([]);
+    const [task, setTask] = useState("");
 
     return <>
     <form className="addTask">
@@ -12,7 +13,7 @@ const Task = () => {
         </label>
       </form>
       <div className="todo-list">
-      
+
       </div>
     </>
 }
