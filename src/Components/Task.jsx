@@ -17,7 +17,7 @@ const Task = () => {
 
     {/* Add a single Todo list. */}
     <div className="addTask">
-        <h2>Enter to do list</h2>
+        <h2 className="text-3xl font-bold underline">Enter to do list</h2>
           <input onChange={handleChange} />
           <button onClick={addTask}>Add Task</button>  
         
