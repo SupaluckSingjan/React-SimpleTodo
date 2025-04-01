@@ -3,17 +3,31 @@ import { useState } from "react"
 const Task = () => {
 
     const [todoList, setTodoList] = useState([]);
-    const [task, setTask] = useState("");
+    const [newTask, setNewTask] = useState("");
+
+    const handleChange = (event) => {
+      setNewTask(event.target.value);
+    }
+
+    const addTask = () => {
+      setTodoList([...todoList, newTask]);
+    }
 
     return <>
-    <form className="addTask">
-        <label>Enter to do list
-          <input type="text" />
-          <input type="button" value="Add Task" />
-        </label>
-      </form>
-      <div className="todo-list">
 
+    {/* Add a single Todo list. */}
+    <div className="addTask">
+        <h2>Enter to do list</h2>
+          <input onChange={handleChange} />
+          <button onClick={addTask}>Add Task</button>  
+        
+      </div>
+
+      {/* Show the Todo list. */}
+      <div className="todo-list">
+        {todoList.map((task) => {
+          return <div>{task}</div>
+        })}
       </div>
     </>
 }
