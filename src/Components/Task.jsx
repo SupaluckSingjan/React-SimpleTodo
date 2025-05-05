@@ -41,8 +41,8 @@ const Task = () => {
       {/* Show the Todo list. */}
       <div className="todo-list py-6 bg-violet-100 text-violet-800 text-md">
         {todoList.map((task) => {
-          return <div>
-           <h1 className="mx-auto px-4 py-4 w-sm bg-slate-100 border border-b-3 border-violet-300/60">{task}</h1>
+          return <div class="flex mx-auto px-4 py-4 w-sm">
+            <h1 className="mx-2  bg-slate-100 border border-b-3 border-violet-300/60">{task}</h1>
             <button onClick={() => DeleteTask(task)}>X</button>
           </div>
         })}
