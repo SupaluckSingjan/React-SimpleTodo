@@ -10,16 +10,16 @@ const Task = () => {
     }
 
     const addTask = () => {
-      setTodoList([...todoList, newTask]);
+      const task = {
+        id: todoList.length === 0 ? 1: todoList[todoList.length - 1].id + 1,
+        taskName: newTask
+      }
+      setTodoList([...todoList, task]);
     }
 
-    const DeleteTask = (taskName) => {
+    const DeleteTask = (id) => {
       const newTodoList = todoList.filter((task)=> {
-        if(task === taskName) {
-          return false;
-        } else {
-          return true;
-        }
+       return task.id !== id
       })
 
       setTodoList(newTodoList)
@@ -42,8 +42,8 @@ const Task = () => {
       <div className="todo-list py-6 bg-violet-100 text-violet-800 text-md">
         {todoList.map((task) => {
           return <div class="flex mx-auto px-4 py-4 w-sm">
-            <h1 className="mx-2  bg-slate-100 border border-b-3 border-violet-300/60">{task}</h1>
-            <button onClick={() => DeleteTask(task)}>X</button>
+            <h1 className="mx-2  bg-slate-100 border border-b-3 border-violet-300/60">{task.taskName}</h1>
+            <button onClick={() => DeleteTask(task.id)}>X</button>
           </div>
         })}
       </div>
